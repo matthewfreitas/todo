@@ -42,16 +42,24 @@
       }
 
       function remove(event) {
-        var position = event.currentTarget.id;
+        var position = event.currentTarget.id.split('-')[1];
         todos.splice(position, 1);
         displayTodos();
       }
 
       function toggle(event) {
-        var position = event.currentTarget.id;
-        var intPosition = parseInt(position)
+        var position = event.currentTarget.id.split('-')[1];
         
+<<<<<<< Updated upstream
         todos[intPosition].completed = !todos[intPosition].completed
+=======
+        if (todos[position].completed === false) {
+          todos[position].completed = true;
+        } else {
+          todos[position].completed = false;
+        }
+
+>>>>>>> Stashed changes
         displayTodos();
       }
 
@@ -67,16 +75,17 @@
           } else {
             todoLi.innerText = "[ ] " + todos[i].todoText; 
           }
+          // (todos[i].completed === true) ? todoLi.innerText = "[X] " + todos[i].todoText : todoLi.innerText = "[ ] " + todos[i].todoText; 
 
           var removeButton = document.createElement("button");
           removeButton.innerText = "Remove";
           removeButton.addEventListener('click', remove);
-          removeButton.id = i;
+          removeButton.id = "remove-" + i;
 
           var toggleButton = document.createElement("button");
           toggleButton.innerText = "Toggle";
           toggleButton.addEventListener('click', toggle);
-          toggleButton.id = i + "-toggle"; 
+          toggleButton.id = "toggle-" + i; 
 
           todoLi.appendChild(toggleButton);
           todoLi.appendChild(removeButton);
@@ -116,6 +125,25 @@
       var editPositionInput = document.getElementById('edit-position-input');
       var editTextInput = document.getElementById('edit-text-input');
       editButton.addEventListener('click', edit); 
+
+      function quiz(text) {
+        var newText = '';
+
+        for (var i = 0; i < text.length; i++) {
+          if (text[i] === '-') {
+            newText += '--';
+          } else {
+            newText += text[i];
+          }
+        }
+
+        return ('--' + newText + '--').split('-');
+      }
     </script>
   </body>
 </html>
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes

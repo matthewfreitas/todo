@@ -51,12 +51,7 @@
         var position = event.currentTarget.id;
         var intPosition = parseInt(position)
         
-        if (todos[intPosition].completed === false) {
-          todos[intPosition].completed = true;
-        } else {
-          todos[intPosition].completed = false;
-        }
-
+        todos[intPosition].completed = !todos[intPosition].completed
         displayTodos();
       }
 

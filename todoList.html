@@ -31,9 +31,12 @@
 
       function edit(event) {
         var newTodoText = prompt("enter new todo value here");
-        var position = event.currentTarget.id.split('-')[1];
-        todos[position].todoText = newTodoText;
-        displayTodos();
+        
+        if (newTodoText !== null && newTodoText !== "") {
+          var position = event.currentTarget.id.split('-')[1];
+          todos[position].todoText = newTodoText;
+          displayTodos();
+        } 
       }
 
       function remove(event) {

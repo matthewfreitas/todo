@@ -1,6 +1,8 @@
 Version 12-
 [x] Each todo should have its own edit button
 [x] The edit button should actually work
+[x] If a user hits cancel then no edit should occur
+[x] If a user hits OK with not text input then no edit should occur
 
 Version 11
 [x] Each todo should have it's own toggle button

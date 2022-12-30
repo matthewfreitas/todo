@@ -1,6 +1,10 @@
+Version 12-
+[x] Each todo should have its own edit button
+[x] The edit button should actually work
+
 Version 11
-[X] Each todo should have it's own toggle button
-[] The toggle buttons should actually work
+[x] Each todo should have it's own toggle button
+[x] The toggle buttons should actually work
 
 Version 10
 [x] Each todo should have its own remove button
